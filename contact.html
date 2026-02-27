@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ModernUI - Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .hero-section {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('images/store1.jpg') center/cover no-repeat;
+      height: 300px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .form-card {
+      border-radius: 15px;
+    }
+
+    .form-card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s ease;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">ModernUI</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div>
+    <h1 class="display-5 fw-bold">Get In Touch</h1>
+    <p class="lead">We’d love to hear from you</p>
+  </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-md-7">
+        <div class="card shadow-lg p-4 form-card">
+
+          <h3 class="text-center mb-4 fw-bold">Contact Us</h3>
+
+          <form class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" required>
+              <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="4" required></textarea>
+              <div class="invalid-feedback">Please enter your message.</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Contact Info Section -->
+<section class="py-5">
+  <div class="container text-center">
+    <h3 class="fw-bold mb-4">Our Information</h3>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="p-4 shadow-sm border rounded">
+          <h5>📍 Location</h5>
+          <p class="text-muted">123 Fashion Street, City Center</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-4 shadow-sm border rounded">
+          <h5>📞 Phone</h5>
+          <p class="text-muted">+91 98765 43210</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-4 shadow-sm border rounded">
+          <h5>✉ Email</h5>
+          <p class="text-muted">support@modernui.com</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+  <p class="mb-0">&copy; 2026 ModernUI. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  (() => {
+    'use strict'
+    const forms = document.querySelectorAll('.needs-validation')
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+</script>
+
+</body>
+</html>

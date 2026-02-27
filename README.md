@@ -95,6 +95,7 @@ Bootstrap grid system ensures flexible layouts.
 The contact form uses:
 
 HTML5 validation attributes
+i have used chatgpt for code optimization purpose
 
 Bootstrap validation classes
 
